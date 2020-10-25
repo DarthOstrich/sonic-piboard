@@ -24,8 +24,9 @@
 <h1>{abbrev[category]}</h1>
 {#each files as sample }
   <h2>:{sample.name}</h2>
-  <audio controls>
+<!--  <audio controls>
     <source src="samples/{sample.name}.flac" type="audio/flac">
     Your browser does not support the audio element.
   </audio>
+-->
 {/each}
