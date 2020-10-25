@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   import CategoryList from './components/CategoryList.svelte'
   import { samples }from './data/data.js'
 </script>

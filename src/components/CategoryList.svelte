@@ -1,6 +1,6 @@
-<script>
+<script lang="ts">
   export let category
-  export let files
+  export let files 
 
   const abbrev = {
     ambi: "Ambient",
