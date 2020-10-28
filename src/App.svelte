@@ -45,20 +45,21 @@
 		padding: 0px;
 		max-width: 1200px;
 		margin: 0 auto;
+    font-size: 1.6rem;
 	}
 
 	h1 {
     text-align: center;
 		color: #ff3e00;
 		text-transform: uppercase;
-		font-size: 4em;
+		font-size: 4rem;
 		font-weight: 100;
     margin: 10px;
 	}
   h2 {
     text-transform: uppercase;
     text-align: center;
-    font-size: 3em;
+    font-size: 3rem;
 		font-weight: 200;
   }
 
@@ -85,6 +86,8 @@
 
 <main>
 	<h1>Sonic Pi-Board</h1>
+  <!-- <p><a href="https://sonic-pi.net/">Sonic Pi</a> is a code-based music creation and performance tool. There are 166 samples within the program itself. You can browse through all of them 
+  easily below.</p> -->
   <section class="search">
     <label for="search">Search</label>
     <input name="search" type="text" placeholder="bass" bind:value={searchTerm} on:input="{(e) => filterSamples(e)}" />
