@@ -8,7 +8,7 @@
     }
     
     for (let property in samples) {
-      const filteredFiles = samples[property].filter((sample)=> sample.includes(searchTerm))
+      const filteredFiles = samples[property].filter((sample)=> sample.includes(searchTerm.toLowerCase()))
       console.log(filtered)
       filtered[property] = filteredFiles
     }
