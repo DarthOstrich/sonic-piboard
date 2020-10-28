@@ -1,22 +1,13 @@
 <script lang="ts">
-  export let category
   export let files 
 
-  const abbrev = {
-    ambi: "Ambient",
-    bass: "Bass",
-    bd: "Bass Drums",
-    drum: "Drums",
-    elec: "Electric Sounds",
-    glitch: "Glitchy sounds",
-    guit: "Guitar",
-    loop: "Loops",
-    mehackit: "Mehackit Sounds",
-    misc: "Miscellaneous",
-    perc: "percussion",
-    sn: "Snares",
-    tabla: "Tabla",
-    vinyl: "Vinyl"
+
+  function getName(sample) {
+    return sample.split(".")[0];
+  }
+
+  function getCat(sample) {
+    return sample.split("_")[0];
   }
 
 </script>
@@ -32,6 +23,7 @@
     list-style: none;
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
   }
   li {
     margin-right: 10px;
@@ -39,13 +31,12 @@
 </style>
 
 <section>
-  <h1>{abbrev[category]}</h1>
   <ul>
   {#each files as sample }
     <li>
-      <h2>:{sample.name}</h2>
+      <h2>:{getName(sample)}</h2>
       <audio controls preload="none">
-        <source src="samples/{sample.name}.flac" type="audio/flac">
+        <source src="samples/{sample}" type="audio/flac">
         Your browser does not support the audio element.
       </audio>
     </li>

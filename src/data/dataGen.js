@@ -13,11 +13,22 @@ files.forEach(sample => {
     name
   };
   if (samples[cat]) {
-    samples[cat].push(entry);
+    samples[cat].push(sample);
   } else {
-    samples[cat] = [entry];
+    samples[cat] = [sample];
   }
 });
+
+// const samples = [];
+// files.forEach(sample => {
+//   const name = sample.split(".")[0];
+//   if (sample.split(".")[1] != "flac") {
+//     return;
+//   }
+//   samples.push(sample);
+// });
+
+// const data = JSON.stringify(samples);
 
 fs.writeFile("./src/data/data.js", `export const samples = ${util.inspect(samples)}`, function(err, file) {
   if (err) throw err;
