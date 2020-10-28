@@ -55,6 +55,12 @@
 		font-weight: 100;
     margin: 10px;
 	}
+  h2 {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 3em;
+		font-weight: 200;
+  }
 
 	@media (min-width: 640px) {
 		main {
